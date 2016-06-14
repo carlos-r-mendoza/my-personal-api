@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "bluebird": "registry:npm/bluebird#3.3.4+20160531224558",
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519"
+  },
+  "globalDependencies": {
+    "boom": "registry:dt/boom#0.0.0+20160317120654",
+    "dotenv": "registry:dt/dotenv#2.0.0+20160327131627",
+    "hapi": "registry:dt/hapi#13.0.0+20160602125023",
+    "node": "registry:dt/node#6.0.0+20160613154055"
+  }
+}

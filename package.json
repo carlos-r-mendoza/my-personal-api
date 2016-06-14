@@ -2,22 +2,24 @@
   "name": "my-personal-api",
   "version": "1.0.0",
   "description": "My personal API.",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "eslint server.js; nodemon server.js",
-    "lint": "eslint server.js",
+    "start": "node dist/server.js",
+    "dev": "nodemon dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "carlos-r-mendoza",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^13.4.1"
+    "bluebird": "^3.4.0",
+    "boom": "^3.2.1",
+    "dotenv": "^2.0.0",
+    "good": "^7.0.1",
+    "good-console": "^6.1.2",
+    "hapi": "^13.4.1",
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
-    "eslint": "^2.12.0",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.8.1",
     "nodemon": "^1.9.2"
   }
 }
