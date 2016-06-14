@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519"
+  },
+  "globalDependencies": {
+    "dotenv": "registry:dt/dotenv#2.0.0+20160327131627",
+    "hapi": "registry:dt/hapi#13.0.0+20160602125023",
+    "node": "registry:dt/node#6.0.0+20160613154055"
+  }
+}
