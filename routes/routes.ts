@@ -1,14 +1,18 @@
 'use strict';
+import { about } from './handlers/about'
+import { projects } from './handlers/projects'
 
-module.exports = [
-    {
-        method: 'GET',
-        path: '/about',
-        handler: require('./handlers/about')
-    },
-    {
-        method: 'GET',
-        path: '/projects',
-        handler: require('./handlers/projects')
-    }
+const routes = [
+  {
+    method: 'GET',
+    path: '/about',
+    handler: about
+  },
+  {
+    method: 'GET',
+    path: '/projects',
+    handler: projects
+  }
 ];
+
+export { routes }
