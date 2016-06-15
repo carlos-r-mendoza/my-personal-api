@@ -2,14 +2,21 @@
 
 import * as Hapi from 'hapi';
 import * as Promise from 'bluebird';
-import { config } from 'dotenv'
-import { tasks } from './tasks/tasks';
-import { routes } from './routes/routes'
+import { config } from 'dotenv';
+import { dbConnect, dbRegisterModels } from './plugins/db';
+import { tasks } from './plugins/tasks';
+import { routes } from './routes/routes';
 
-config(); // load enviromental variables
+// 1. Load env vars
+config();
+
+// 2. create server
 const server = new Hapi.Server();
-
 server.connection({ port: process.env.PORT || 3000 });
+
+// 3. register DB
+dbConnect();
+dbRegisterModels();
 
 server.route(routes);
 

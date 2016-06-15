@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "bluebird": "registry:npm/bluebird#3.3.4+20160531224558",
-    "lodash": "registry:npm/lodash#4.0.0+20160416211519"
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519",
+    "mongoose": "registry:npm/mongoose#4.3.5+20160610145311"
   },
   "globalDependencies": {
     "boom": "registry:dt/boom#0.0.0+20160317120654",
