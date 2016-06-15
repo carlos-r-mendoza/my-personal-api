@@ -1,6 +1,7 @@
 'use strict';
 
-module.exports = function(request, reply) {
+function projects(request, reply) {
     var a = 5;
-
 }
+
+export { projects }
