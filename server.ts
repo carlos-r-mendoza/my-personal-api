@@ -6,7 +6,7 @@ import { config } from 'dotenv';
 import { dbConnect, dbRegisterModels } from './db/db';
 import { tasks } from './plugins/tasks';
 import { routes } from './routes/routes';
-import { bio } from './db/schemas/bio';
+import { about } from './db/schemas/about';
 
 // 1. Load env vars
 config();
@@ -22,7 +22,7 @@ dbRegisterModels();
 server.route(routes);
 
 server.register(tasks,
-  function (err) {
+   (err) => {
     if (err) {
       throw err;
     }
