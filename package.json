@@ -21,6 +21,8 @@
     "mongoose": "^4.5.0"
   },
   "devDependencies": {
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "tslint": "^3.12.1",
+    "typescript": "^1.8.10"
   }
 }
