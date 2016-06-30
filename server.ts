@@ -3,9 +3,10 @@
 import * as Hapi from 'hapi';
 import * as Promise from 'bluebird';
 import { config } from 'dotenv';
-import { dbConnect, dbRegisterModels } from './plugins/db';
+import { dbConnect, dbRegisterModels } from './db/db';
 import { tasks } from './plugins/tasks';
 import { routes } from './routes/routes';
+import { about } from './db/schemas/about';
 
 // 1. Load env vars
 config();
@@ -20,15 +21,16 @@ dbRegisterModels();
 
 server.route(routes);
 
-server.register(Promise.all(tasks)
-  .then(function () {
+server.register(tasks,
+   (err) => {
+    if (err) {
+      throw err;
+    }
+
     server.start((err) => {
       if (err) {
         throw err;
       }
       console.log(`Server running at: ${server.info.uri}`);
     });
-  })
-  .catch(function (err) {
-    throw err;
-  }));
+  });
